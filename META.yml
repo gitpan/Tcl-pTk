@@ -1,11 +1,29 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Tcl-pTk
-version:      0.8
-version_from: lib/Tcl/pTk.pm
-installdirs:  site
+--- #YAML:1.0
+name:               Tcl-pTk
+version:            0.81
+abstract:           ~
+author:  []
+license:            perl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Tcl:                           0.9
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30_01
+    Tcl:  0.9
+no_index:
+    directory:
+        - t
+        - inc
+        - benchmarks
+        - TableMatrixDemos
+        - lib/Tcl/pTk/demos
+generated_by:       ExtUtils::MakeMaker version 6.56
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
+keywords:
+    - Tk
+    - Tcl
+    - Tix
+    - GUI
