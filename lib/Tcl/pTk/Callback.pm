@@ -1,6 +1,7 @@
 package Tcl::pTk::Callback;
 
-our ($VERSION) = ('0.83');
+our ($VERSION) = ('0.84');
+
 
 use strict;
 use warnings;
@@ -115,6 +116,11 @@ sub new{
         my $self = {};
         
         my $callback = shift;
+
+	# Fall thru if the supplied callback is already a callback object
+	if( Scalar::Util::blessed($callback) && $callback->isa('Tcl::pTk::Callback') ){
+		return $callback;
+	}
         
         # Get the optional noWidgetArg
         my $noWidgetArg = shift;

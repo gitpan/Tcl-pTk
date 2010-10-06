@@ -6,7 +6,7 @@
 
 package Tcl::pTk::Widget;
 
-our ($VERSION) = ('0.83');
+our ($VERSION) = ('0.84');
 
 use IO::Handle; 
 
@@ -18,6 +18,7 @@ use Tcl::pTk::Trace;
 use Tcl::pTk::Frame;
 use Tcl::pTk::HList;
 use Tcl::pTk::Text;
+use Tcl::pTk::Entry;
 use Tcl::pTk::Photo;
 use Tcl::pTk::Bitmap;
 use Tcl::pTk::XEvent;  # Limited XEvent support
